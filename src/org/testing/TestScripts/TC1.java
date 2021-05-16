@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testing.Base.Base;
@@ -41,7 +42,7 @@ public void login() throws InterruptedException, IOException
 	Thread.sleep(4000);
 	List<WebElement>Trending=driver.findElements(By.xpath(pr.getProperty("Trending")));
 	Trending.get(0).click();
-	
+
 	ScreenshotCapture.takeScreenShot(driver, "./Screenshot/TC1.png");
 	Thread.sleep(3000);
 	Logout logout = new Logout(driver,pr);

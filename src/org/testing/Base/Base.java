@@ -18,12 +18,12 @@ public class Base
 	@BeforeMethod
 	public void BrowserOpening() throws InterruptedException, IOException
 	{
-	File f= new File("../YTFramework/Object.properties");
+	File f= new File("../YTFramework2/Object.properties");
 	FileInputStream fi= new FileInputStream(f);
 	pr= new Properties();
 	pr.load(fi);
 	
-	System.setProperty("webdriver.chrome.driver", "../YTFramework/chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "../YTFramework2/chromedriver.exe");
 	driver= new ChromeDriver();
 	driver.get("https://www.youtube.com/");
 	driver.manage().window().maximize();
